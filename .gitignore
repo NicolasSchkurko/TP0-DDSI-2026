@@ -1,0 +1,28 @@
+# Maven - Salida de compilación
+target/
+
+# Binarios y archivos empaquetados
+*.class
+*.jar
+*.war
+*.ear
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# Eclipse
+.settings/
+.classpath
+.project
+.factorypath
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
