@@ -1,16 +1,19 @@
 package domain.carritos;
 
 import domain.lugares.Direccion;
+import domain.Cliente;
+import domain.Pago;
 
 import java.util.Date;
+import java.util.List;
 
 public class Carrito {
-    //private List(Item) items;
+    private List<Item> items;
     private Date fechaCompra;
-    //private Cliente cliente;
+    private Cliente cliente;
     private Direccion direccionEnvio;
     private Direccion direccionCobro;
-    //private List(Pago) pagos;
+    private List<Pago> pagos;
     private Estado estado;
 
     private void setEstado(Estado estadoActualizado){
