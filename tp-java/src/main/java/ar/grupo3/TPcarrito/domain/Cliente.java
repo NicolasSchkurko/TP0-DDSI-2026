@@ -34,7 +34,11 @@ public class Cliente {
   }
 
   public float getMontoDeuda() {
-    return 0.0F;
+    float deudaTotal = 0.0f;
+    for (Carrito carrito : carritos) {
+      deudaTotal += carrito.getMontoDeuda();
+    }
+    return deudaTotal;
   }
 
   public boolean estaHabilitado() {

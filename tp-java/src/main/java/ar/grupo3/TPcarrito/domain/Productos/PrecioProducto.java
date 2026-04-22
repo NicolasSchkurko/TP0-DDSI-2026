@@ -26,18 +26,11 @@ public class PrecioProducto {
   }
 
   public boolean getCumpleVigencia(Date fecha) {
-    return this.fechaAnteriorAVigencia(fecha) && this.fechaPosteriorAVigencia(fecha);
+    return fecha.after(fechaInicioVigencia) && fecha.before(fechaFinVigencia);
+
   }
 
   public float getPrecio() {
     return precio;
-  }
-
-  private boolean fechaAnteriorAVigencia(Date fecha) {
-    return this.fechaInicioVigencia.compareTo(fecha) < 0;
-  }
-
-  private boolean fechaPosteriorAVigencia(Date fecha) {
-    return this.fechaFinVigencia.compareTo(fecha) >= 0;
   }
 }

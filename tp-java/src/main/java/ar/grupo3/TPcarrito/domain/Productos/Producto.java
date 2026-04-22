@@ -36,6 +36,6 @@ public class Producto {
         return precio.getPrecio();
       }
     }
-    return 0;
+    return 0.0F;
   }
 }

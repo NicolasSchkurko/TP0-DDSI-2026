@@ -4,11 +4,13 @@ import ar.grupo3.TPcarrito.domain.Productos.Producto;
 import java.util.Date;
 
 public class Item {
+  private Carrito carrito;
   private Producto producto;
   private int cantidad;
   private float precioUnitario;
 
   public Item(
+      Carrito carrito,
       Producto producto,
       int cantidad,
       Date fecha
@@ -18,16 +20,16 @@ public class Item {
     this.precioUnitario = producto.getPrecio(fecha);
   }
 
-  public float getPrecio(Date fecha) {
+  public float getPrecio() {
     return precioUnitario * cantidad;
   }
 
-  public float getPrecioOficial(Date fecha) {
-    return precioUnitario * cantidad;
+  public float getPrecioOficial() {
+    return producto.getPrecio(carrito.getFecha()) * cantidad;
   }
 
   public float getDescuento(Date fecha, int descuento) {
-    return (precioUnitario * cantidad) * (descuento / 100.0f);
+    return this.getPrecioOficial() - this.getPrecio();
   }
 
   public Producto getProducto() {

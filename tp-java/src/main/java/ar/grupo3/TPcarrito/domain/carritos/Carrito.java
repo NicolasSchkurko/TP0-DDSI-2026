@@ -56,7 +56,7 @@ public class Carrito {
   public float getMontoCarrito() {
     float total = 0.0f;
     for (Item item : items) {
-      total += item.getPrecio(fechaCompra);
+      total += item.getPrecio();
     }
     if (cliente != null && cliente.isEsPreferencial()) {
       total *= 0.9f;  // 10% discount
@@ -72,5 +72,8 @@ public class Carrito {
     this.estado = estadoActualizado;
   }
 
+  public Date getFecha () {
+    return this.fechaCompra;
+  }
 
 }
