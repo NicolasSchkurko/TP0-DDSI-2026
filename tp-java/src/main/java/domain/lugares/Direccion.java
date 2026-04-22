@@ -11,6 +11,9 @@ public class Direccion {
   private String departamento;
   private Ciudad ciudad;
 
+  /**
+   * Constructor completo.
+   */
   public Direccion(
       String calleUno,
       String calleDos,
@@ -31,6 +34,11 @@ public class Direccion {
     this.ciudad = ciudad;
   }
 
+  /**
+   * Permite obtener la direccion completa.
+   *
+   * @return String con la direccion completa, incluyendo ciudad, provincia y pais.
+   */
   public String getDireccion() {
     String valorAltura = sinAltura ? "S/N" : String.valueOf(altura);
 
