@@ -1,4 +1,4 @@
-package ar.grupo3.TPcarrito;
+package ar.grupo3.TPcarrito.app;
 
 /**
  * Hello world!

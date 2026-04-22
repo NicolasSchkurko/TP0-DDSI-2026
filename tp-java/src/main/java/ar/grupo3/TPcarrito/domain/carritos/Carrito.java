@@ -1,8 +1,8 @@
-package domain.carritos;
+package ar.grupo3.TPcarrito.domain.carritos;
 
-import domain.lugares.Direccion;
-import domain.Cliente;
-import domain.Pago;
+import ar.grupo3.TPcarrito.domain.lugares.Direccion;
+import ar.grupo3.TPcarrito.domain.Cliente;
+import ar.grupo3.TPcarrito.domain.Pago;
 
 import java.util.Date;
 import java.util.List;

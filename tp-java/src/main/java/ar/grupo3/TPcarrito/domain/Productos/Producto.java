@@ -1,4 +1,4 @@
-package domain.Productos;
+package ar.grupo3.TPcarrito.domain.Productos;
 
 import java.util.Date;
 import java.util.List;

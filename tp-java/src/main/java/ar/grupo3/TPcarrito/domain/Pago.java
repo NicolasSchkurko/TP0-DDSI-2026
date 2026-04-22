@@ -1,7 +1,7 @@
-package domain;
+package ar.grupo3.TPcarrito.domain;
 
-import domain.carritos.Carrito;
-import domain.tarjetas.Tarjeta;
+import ar.grupo3.TPcarrito.domain.carritos.Carrito;
+import ar.grupo3.TPcarrito.domain.tarjetas.Tarjeta;
 
 public class Pago {
   private Carrito carrito;

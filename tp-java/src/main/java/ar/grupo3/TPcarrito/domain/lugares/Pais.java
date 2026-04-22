@@ -1,4 +1,4 @@
-package domain.lugares;
+package ar.grupo3.TPcarrito.domain.lugares;
 
 public class Pais {
   private String nombre;

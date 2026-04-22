@@ -1,6 +1,6 @@
-package domain.carritos;
+package ar.grupo3.TPcarrito.domain.carritos;
 
-import domain.Productos.Producto;
+import ar.grupo3.TPcarrito.domain.Productos.Producto;
 import java.util.Date;
 
 public class Item {
