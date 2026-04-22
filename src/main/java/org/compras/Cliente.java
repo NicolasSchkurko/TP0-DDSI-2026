@@ -12,6 +12,16 @@ public class Cliente {
     private Boolean esPreferencial;
 
     public Double getMontoDeuda() {
-        
+        return carritos.stream()
+                .mapToDouble(carrito -> carrito.getMontoDeuda())
+                .sum();
+    }
+
+    public Boolean getEsPreferencial() {
+        return esPreferencial;
+    }
+
+    public Boolean estaHabilitado() {
+        return true;
     }
 }
