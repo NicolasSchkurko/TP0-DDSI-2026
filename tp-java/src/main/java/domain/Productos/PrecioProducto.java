@@ -3,25 +3,41 @@ package domain.Productos;
 import java.util.Date;
 
 public class PrecioProducto {
-    private Date fechaInicioVigencia;
-    private Date fechaFinVigencia;
-    private float precio;
+  private Date fechaInicioVigencia;
+  private Date fechaFinVigencia;
+  private float precio;
 
-    public  Date getFechaInicioVigencia(){
-        return  this.fechaInicioVigencia;
-    }
+  public PrecioProducto(
+      Date fechaInicioVigencia,
+      Date fechaFinVigencia,
+      float precio
+  ) {
+    this.fechaInicioVigencia = fechaInicioVigencia;
+    this.fechaFinVigencia = fechaFinVigencia;
+    this.precio = precio;
+  }
 
-    public Date getFechaFinVigencia() {
-        return fechaFinVigencia;
-    }
+  public Date getFechaInicioVigencia() {
+    return this.fechaInicioVigencia;
+  }
 
-    public boolean getCumpleVigencia(Date fecha){
-        boolean fechaEsIgualOAnteriorAInicioVigencia = this.fechaInicioVigencia.compareTo(fecha)<=0;
-        boolean fechaEsIgualOPosteriorAFinVigencia = this.fechaFinVigencia.compareTo(fecha)>=0;
-        return fechaEsIgualOAnteriorAInicioVigencia && fechaEsIgualOPosteriorAFinVigencia;
-    }
+  public Date getFechaFinVigencia() {
+    return this.fechaFinVigencia;
+  }
 
-    public float getPrecio() {
-        return precio;
-    }
+  public boolean getCumpleVigencia(Date fecha) {
+    return this.fechaAnteriorAVigencia(fecha) && this.fechaPosteriorAVigencia(fecha);
+  }
+
+  public float getPrecio() {
+    return precio;
+  }
+
+  private boolean fechaAnteriorAVigencia(Date fecha) {
+    return this.fechaInicioVigencia.compareTo(fecha) < 0;
+  }
+
+  private boolean fechaPosteriorAVigencia(Date fecha) {
+    return this.fechaFinVigencia.compareTo(fecha) >= 0;
+  }
 }

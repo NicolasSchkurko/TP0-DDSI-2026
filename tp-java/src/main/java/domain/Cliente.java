@@ -40,4 +40,8 @@ public class Cliente {
   public boolean estaHabilitado() {
     return true;
   }
+
+  public boolean isEsPreferencial() {
+    return esPreferencial;
+  }
 }

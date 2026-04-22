@@ -21,4 +21,8 @@ public class Pago {
   public boolean verificarTarjeta() {
     return true;
   }
+
+  public float getMonto() {
+    return monto;
+  }
 }

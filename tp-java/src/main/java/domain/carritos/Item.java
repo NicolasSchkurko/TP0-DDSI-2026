@@ -1,22 +1,36 @@
 package domain.carritos;
 
 import domain.Productos.Producto;
+import java.util.Date;
 
 public class Item {
-    private Carrito carrito;
-    private Producto producto;
-    private int cantidad;
-    private  float precioUnitario;
+  private Producto producto;
+  private int cantidad;
+  private float precioUnitario;
 
-    public float getPrecio(){
-        return 0;
-    }
+  public Item(
+      Producto producto,
+      int cantidad,
+      Date fecha
+  ) {
+    this.producto = producto;
+    this.cantidad = cantidad;
+    this.precioUnitario = producto.getPrecio(fecha);
+  }
 
-    public float getPrecioOficial(){
-        return 0;
-    }
+  public float getPrecio(Date fecha) {
+    return precioUnitario * cantidad;
+  }
 
-    public float getDescuento(){
-        return  0;
-    }
+  public float getPrecioOficial(Date fecha) {
+    return precioUnitario * cantidad;
+  }
+
+  public float getDescuento(Date fecha, int descuento) {
+    return (precioUnitario * cantidad) * (descuento / 100.0f);
+  }
+
+  public Producto getProducto() {
+    return producto;
+  }
 }
